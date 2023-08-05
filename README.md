@@ -1,8 +1,28 @@
-# React + Vite
+# Memory Cards Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a memory game built with React. The app fetches card images from the [https://www.deckofcardsapi.com/](Deck of Cards API). Users are tasked with selecting from a random selection of cards without picking the same card twice.
 
-Currently, two official plugins are available:
+Try the game [](here). (NYI)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to Play
+
+- A chosen number of random cards are displayed
+- Click on any card to make your first selection
+- The card order will shuffle
+- Click on a card you haven't selected before
+- Continue selecting cards without repeating
+- If you select a card you've already chosen, the game ends
+- Select all cards once to win
+
+## Implementation Details
+
+- Functional components with React Hooks for state management
+- UseState and UseEffect hooks to track selections, score and fetch API data
+- External Deck of Cards API request with Fetch
+- Shuffle array utility to randomize card order
+- Game logic checks for determing win/lose conditions and tracking score
+- Variable game difficulty allowing for different numbers of cards
+
+## Credits
+
+Created according to instructions from [https://www.theodinproject.com/lessons/node-path-react-new-memory-card](The Odin Project).
