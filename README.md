@@ -1,6 +1,6 @@
 # Memory Cards Game
 
-This is a memory game built with React. The app fetches card images from the [https://www.deckofcardsapi.com/](Deck of Cards API). Users are tasked with selecting from a random selection of cards without picking the same card twice.
+This is a memory game built with React. The app fetches card images from the [Deck of Cards API](https://www.deckofcardsapi.com/). Users are tasked with selecting from a random selection of cards without picking the same card twice.
 
 Try the game [](here). (NYI)
 
@@ -25,4 +25,4 @@ Try the game [](here). (NYI)
 
 ## Credits
 
-Created according to instructions from [https://www.theodinproject.com/lessons/node-path-react-new-memory-card](The Odin Project).
+Created according to instructions from [The Odin Project](https://www.theodinproject.com/lessons/node-path-react-new-memory-card).
