@@ -97,4 +97,5 @@
 
 button.difficultySelected {
   color: var(--secondary_2);
+  border-color: var(--secondary_2);
 }
