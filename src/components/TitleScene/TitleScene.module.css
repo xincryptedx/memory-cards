@@ -94,3 +94,7 @@
   height: 44px;
   margin: 5px 0px;
 }
+
+button.difficultySelected {
+  color: var(--secondary_2);
+}
