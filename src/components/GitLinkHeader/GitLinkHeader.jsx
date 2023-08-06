@@ -3,6 +3,8 @@ import gitIcon from "/home/jrbarnhart/repos/memory-cards/src/assets/github-mark.
 import doubleDownArrowIcon from "/home/jrbarnhart/repos/memory-cards/src/assets/double-arrow-down.svg";
 import { useState } from "react";
 
+const link = "https://github.com/xincryptedx/memory-cards";
+
 function AuthorHeader() {
   const [headerHover, setHeaderHover] = useState(false);
   const [gitHover, setGitHover] = useState(false);
@@ -22,7 +24,7 @@ function AuthorHeader() {
       <p className={styles.authorP}>{gitHover ? "GitHub" : "xIncryptedx"}</p>
       <a
         className={styles.git}
-        href="https://github.com/xincryptedx/cv-creator"
+        href={link}
         onMouseEnter={() => setGitHover(true)}
         onMouseLeave={() => setGitHover(false)}
         onFocus={() => setHeaderHover(true)}
