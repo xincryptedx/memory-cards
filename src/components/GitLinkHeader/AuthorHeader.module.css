@@ -1,0 +1,81 @@
+.authorHeader {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template: 1fr / 1fr 10% 10% 1fr;
+  grid-template-areas: ". author git ";
+
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+
+  color: #000000;
+  font-weight: bold;
+
+  background-color: #70d300;
+  border-bottom: 1px solid #1f1f1f;
+  box-shadow: 1px 1px 1px rgb(54, 54, 54);
+
+  height: 60px;
+  width: 100%;
+
+  transform: translateY(-30px);
+  transition: transform 0.3s ease-in-out;
+  perspective: 500px;
+}
+
+.headerHovering {
+  transform: translateY(0px);
+}
+
+.headerHovering .authorP,
+.headerHovering .git {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.authorP {
+  opacity: 0;
+  grid-area: author;
+  white-space: nowrap;
+  justify-self: center;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.git {
+  opacity: 0;
+  grid-area: git;
+  justify-self: start;
+  padding-left: 30px;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+.gitIcon {
+  height: 40px;
+  width: 40px;
+  transition: transform 0.5s linear;
+}
+
+.gitIconHovering {
+  transform: rotate3d(0, 1, 0, -360deg);
+}
+
+.downArrowIcon {
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 13px);
+  height: 26px;
+  width: 26px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.headerHovering .downArrowIcon {
+  opacity: 0;
+}
+
+@media print {
+  .authorHeader {
+    display: none;
+  }
+}
