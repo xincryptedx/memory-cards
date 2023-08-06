@@ -18,6 +18,8 @@ body {
   display: grid;
   justify-items: center;
 
+  height: 100vh;
+
   font-family: Arial, Helvetica, sans-serif;
 
   background-color: var(--background_2);
