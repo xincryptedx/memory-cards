@@ -1,9 +1,28 @@
 .titleScene {
   display: grid;
   place-items: center;
+  grid-template: 1fr repeat(3, min-content) 1fr / 1fr;
+  grid-template-areas:
+    "."
+    "title"
+    "play"
+    "difficulty"
+    ".";
 
   width: 100%;
   max-width: 1200px;
 
   background-color: var(--primary_1);
+}
+
+.title {
+  grid-area: title;
+}
+
+.playButton {
+  grid-area: play;
+}
+
+.difficultySection {
+  grid-area: difficulty;
 }
