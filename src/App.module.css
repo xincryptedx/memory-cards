@@ -17,5 +17,8 @@ body {
 .appContainer {
   display: grid;
   justify-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+
   background-color: var(--background_2);
 }
