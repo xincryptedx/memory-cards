@@ -28,6 +28,22 @@
 .title {
   margin-top: 50px;
   grid-area: title;
+
+  font-size: 2.5rem;
+  font-family: "Times New Roman", Times, serif;
+  color: var(--primary_1);
+  filter: drop-shadow(1px 1px 1px black);
+}
+
+.title::before,
+.title::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  background: var(--secondary_1);
+  margin: 0 8px;
+  transform: translateY(-10px);
 }
 
 .playButton {
