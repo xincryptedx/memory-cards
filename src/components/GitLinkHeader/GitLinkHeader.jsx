@@ -1,4 +1,4 @@
-import styles from "./AuthorHeader.module.css";
+import styles from "./GitLinkHeader.module.css";
 import gitIcon from "../assets/github-mark.svg";
 import doubleDownArrowIcon from "../assets/double-arrow-down.svg";
 import { useState } from "react";
