@@ -1,5 +1,9 @@
 .titleScene {
-  background-color: var(--primary_1);
+  display: grid;
+  place-items: center;
+
   width: 100%;
   max-width: 1200px;
+
+  background-color: var(--primary_1);
 }
