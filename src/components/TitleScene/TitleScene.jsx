@@ -2,7 +2,7 @@ import styles from "./TitleScene.module.css";
 
 function TitleScene() {
   return (
-    <main className={styles.titleSceen}>
+    <main className={styles.titleScene}>
       <h1 className={styles.title}>Memory Cards</h1>
       <button className={styles.playButton}>Play</button>
       <section className={styles.difficultySection}>
