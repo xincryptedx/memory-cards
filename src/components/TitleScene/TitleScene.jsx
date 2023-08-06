@@ -1,10 +1,12 @@
+import styles from "./TitleScene.module.css";
+
 function TitleScene() {
   return (
-    <main>
-      <h1>Memory Cards</h1>
-      <button>Play</button>
-      <section>
-        <p>Difficulty</p>
+    <main className={styles.titleSceen}>
+      <h1 className={styles.title}>Memory Cards</h1>
+      <button className={styles.playButton}>Play</button>
+      <section className={styles.difficultySection}>
+        <p>Select a Difficulty</p>
         <button>Easy - 5 Cards</button>
         <button>Medium - 10 Cards</button>
         <button>Hard - 15 Cards</button>
