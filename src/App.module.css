@@ -9,3 +9,12 @@
   --font_light: #f8f8f8;
   --font_dark: #080808;
 }
+
+body {
+  background-color: var(--background_1);
+}
+
+.appContainer {
+  background-color: var(--primary_1);
+  max-width: 1200px;
+}
