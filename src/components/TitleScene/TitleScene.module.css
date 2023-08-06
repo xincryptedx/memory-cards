@@ -12,17 +12,38 @@
   width: 100%;
   max-width: 1200px;
 
-  background-color: var(--primary_1);
+  background-color: var(--secondary_1);
 }
 
 .title {
+  margin-top: 50px;
   grid-area: title;
 }
 
 .playButton {
   grid-area: play;
+
+  height: 70px;
+  width: 150px;
+
+  margin-top: 130px;
+  margin-bottom: 50px;
+
+  border: 2px solid var(--secondary_2);
+  border-radius: 10px;
+  background-color: var(--primary_1);
+
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--font_light);
+  text-shadow: 1px 1px 2px black;
 }
 
 .difficultySection {
   grid-area: difficulty;
+  display: grid;
+}
+
+.difficultySection p {
+  text-align: center;
 }
