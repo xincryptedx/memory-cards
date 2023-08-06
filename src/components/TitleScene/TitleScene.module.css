@@ -16,13 +16,15 @@
 }
 
 .titleScene button {
-  border: 2px solid var(--secondary_2);
+  border: 2px solid var(--secondary_1);
   border-radius: 10px;
   background-color: var(--primary_1);
 
   font-weight: bold;
   color: var(--font_light);
   text-shadow: 1px 1px 2px black;
+
+  filter: drop-shadow(1px 1px 2px black);
 }
 
 .title {
@@ -32,7 +34,7 @@
   font-size: 2.5rem;
   font-family: "Times New Roman", Times, serif;
   color: var(--primary_1);
-  filter: drop-shadow(1px 1px 1px black);
+  text-shadow: 2px 1px 2px black;
 }
 
 .title::before,
