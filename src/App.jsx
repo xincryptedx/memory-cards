@@ -1,12 +1,12 @@
 import { useState } from "react";
 import GitLinkHeader from "./components/GitLinkHeader/GitLinkHeader";
-import "./AppStyles.css";
+import styles from "./App.module.css";
 
 function App() {
   return (
-    <>
+    <div className={styles.appContainer}>
       <GitLinkHeader></GitLinkHeader>
-    </>
+    </div>
   );
 }
 
