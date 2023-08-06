@@ -1,5 +1,6 @@
 import { useState } from "react";
 import GitLinkHeader from "./components/GitLinkHeader/GitLinkHeader";
+import "./AppStyles.css";
 
 function App() {
   return (
