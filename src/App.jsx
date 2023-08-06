@@ -1,7 +1,12 @@
 import { useState } from "react";
+import GitLinkHeader from "./components/GitLinkHeader/GitLinkHeader";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <GitLinkHeader></GitLinkHeader>
+    </>
+  );
 }
 
 export default App;
