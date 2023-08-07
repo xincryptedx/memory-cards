@@ -10,7 +10,7 @@ function StatsPanel() {
         Score: <span></span>
       </p>
       <p className={styles.highScore}>
-        High Score: <span></span>
+        Best: <span></span>
       </p>
     </section>
   );

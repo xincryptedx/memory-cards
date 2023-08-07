@@ -1,7 +1,7 @@
 .statsPanel {
   flex: 0 0 auto;
   display: grid;
-  grid-template: 1fr / repeat(3, 1fr);
+  grid-template: 1fr / repeat(3, minmax(min-content, 1fr));
   justify-items: start;
 
   background-color: var(--background_3);
@@ -12,11 +12,12 @@
 
 .statsPanel p {
   font-weight: bold;
+  white-space: nowrap;
+  padding: 0px 10px;
 }
 
 .round {
   justify-self: start;
-  padding-left: 10px;
 }
 
 .score {
@@ -25,5 +26,4 @@
 
 .highScore {
   justify-self: end;
-  padding-right: 10px;
 }
