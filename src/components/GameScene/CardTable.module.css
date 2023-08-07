@@ -2,6 +2,5 @@
   grid-area: cards;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  row-gap: 15px;
+  justify-content: space-evenly;
 }
