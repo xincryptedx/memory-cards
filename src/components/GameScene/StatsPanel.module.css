@@ -1,3 +1,6 @@
 .statsPanel {
   flex: 0 0 auto;
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  justify-items: start;
 }
