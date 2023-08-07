@@ -3,6 +3,8 @@
   display: grid;
   grid-template: 1fr / min-content 1fr min-content;
   grid-template-areas: "new . quit";
+
+  background-color: var(--background_1);
 }
 
 .controlPanel button {
