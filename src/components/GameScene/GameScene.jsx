@@ -1,3 +1,4 @@
+import CardTable from "./CardTable";
 import ControlPanel from "./ControlPanel";
 import styles from "./GameScene.module.css";
 import StatsPanel from "./StatsPanel";
@@ -7,7 +8,7 @@ function GameScene() {
     <main className={styles.gameScene}>
       <ControlPanel></ControlPanel>
       <StatsPanel></StatsPanel>
-      {/* CardTable */}
+      <CardTable></CardTable>
     </main>
   );
 }
