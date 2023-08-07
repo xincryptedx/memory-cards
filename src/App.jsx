@@ -20,7 +20,7 @@ function App() {
           ></TitleScene>
         </>
       ) : scene === "Game" ? (
-        <GameScene></GameScene>
+        <GameScene difficulty={difficulty}></GameScene>
       ) : null}
     </div>
   );
