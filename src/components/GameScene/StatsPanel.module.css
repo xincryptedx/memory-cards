@@ -5,6 +5,13 @@
   justify-items: start;
 
   background-color: var(--background_3);
+
+  box-shadow: 1px 1px 2px black;
+  z-index: 1;
+}
+
+.statsPanel p {
+  font-weight: bold;
 }
 
 .round {
