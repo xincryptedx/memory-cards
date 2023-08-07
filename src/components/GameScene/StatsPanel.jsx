@@ -2,7 +2,7 @@ import styles from "./StatsPanel.module.css";
 
 function StatsPanel() {
   return (
-    <section className={styles.StatsPanel}>
+    <section className={styles.statsPanel}>
       <p>
         Round: <span></span>
       </p>
