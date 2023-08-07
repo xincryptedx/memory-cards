@@ -32,7 +32,7 @@ function CardTable({ difficulty }) {
         <Card
           key={i}
           power={getRandomEntry(powers)}
-          suits={getRandomEntry(suits)}
+          suit={getRandomEntry(suits)}
         ></Card>
       );
     }
