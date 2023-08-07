@@ -1,13 +1,6 @@
 .gameScene {
-  display: grid;
-  place-items: center;
-  grid-template: 1fr repeat(3, min-content) 1fr / 1fr;
-  grid-template-areas:
-    "."
-    "controls"
-    "stats"
-    "cards"
-    ".";
+  display: flex;
+  flex-direction: column;
 
   width: 100%;
   max-width: 1200px;
