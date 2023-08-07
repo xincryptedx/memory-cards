@@ -1,9 +1,10 @@
+import ControlPanel from "./ControlPanel";
 import styles from "./GameScene.module.css";
 
 function GameScene() {
   return (
     <main className={styles.gameScene}>
-      {/* Controls */}
+      <ControlPanel></ControlPanel>
       {/* Stats */}
       {/* CardTable */}
     </main>
