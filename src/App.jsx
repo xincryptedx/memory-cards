@@ -10,13 +10,15 @@ function App() {
 
   return (
     <div className={styles.appContainer}>
-      <GitLinkHeader></GitLinkHeader>
       {scene === "Title" ? (
-        <TitleScene
-          setScene={setScene}
-          difficulty={difficulty}
-          setDifficulty={setDifficulty}
-        ></TitleScene>
+        <>
+          <GitLinkHeader></GitLinkHeader>
+          <TitleScene
+            setScene={setScene}
+            difficulty={difficulty}
+            setDifficulty={setDifficulty}
+          ></TitleScene>
+        </>
       ) : scene === "Game" ? (
         <GameScene></GameScene>
       ) : null}
