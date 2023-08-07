@@ -1,5 +1,7 @@
 .card {
-  width: 100px;
+  width: 130px;
   aspect-ratio: 2.5 / 3.5;
   background-color: var(--primary_1);
+
+  margin: 10px;
 }
