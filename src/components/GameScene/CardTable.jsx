@@ -19,22 +19,20 @@ const powers = [
 ];
 const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
 
-const getRandomEntry = (array) => {
-  const randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
-};
-
 function CardTable({ difficulty }) {
   const getRandomCards = () => {
+    const cardCombinations = [];
+    powers.map((power) => {
+      suits.map((suit) => cardCombinations.push([power, suit]));
+    });
+
     let cards = [];
+    cardCombinations.sort(() => Math.random() - 0.5);
+
     for (let i = 0; i < difficulty; i += 1) {
-      cards.push(
-        <Card
-          key={i}
-          power={getRandomEntry(powers)}
-          suit={getRandomEntry(suits)}
-        ></Card>
-      );
+      const [power, suit] = cardCombinations.pop();
+
+      cards.push(<Card key={i} power={power} suit={suit}></Card>);
     }
     return cards;
   };
