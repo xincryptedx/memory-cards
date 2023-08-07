@@ -3,19 +3,21 @@ import Card from "./Card.jsx";
 
 function CardTable() {
   return (
-    <section className={styles.cardTable}>
-      {/* Cards get dynamically added here */}
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-    </section>
+    <div className={styles.scrollWrapper}>
+      <section className={styles.cardTable}>
+        {/* Cards get dynamically added here */}
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </section>
+    </div>
   );
 }
 
