@@ -1,7 +1,10 @@
 .cardTable {
-  flex: 1 1 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  place-items: center;
+  grid-gap: 20px;
+
+  padding: 10px;
+
   overflow-y: scroll;
 }
