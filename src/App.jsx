@@ -1,7 +1,8 @@
+import styles from "./App.module.css";
 import { useState } from "react";
 import GitLinkHeader from "./components/GitLinkHeader/GitLinkHeader";
 import TitleScene from "./components/TitleScene/TitleScene";
-import styles from "./App.module.css";
+import GameScene from "./components/GameScene/GameScene";
 
 function App() {
   const [scene, setScene] = useState("Title");
@@ -16,7 +17,9 @@ function App() {
           difficulty={difficulty}
           setDifficulty={setDifficulty}
         ></TitleScene>
-      ) : scene === "Game" ? null : null}
+      ) : scene === "Game" ? (
+        <GameScene></GameScene>
+      ) : null}
     </div>
   );
 }
