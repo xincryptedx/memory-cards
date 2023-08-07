@@ -6,7 +6,7 @@ import GameScene from "./components/GameScene/GameScene";
 
 function App() {
   const [scene, setScene] = useState("Title");
-  const [difficulty, setDifficulty] = useState(1);
+  const [difficulty, setDifficulty] = useState(10);
 
   return (
     <div className={styles.appContainer}>
