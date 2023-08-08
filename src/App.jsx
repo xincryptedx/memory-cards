@@ -35,10 +35,14 @@ function App() {
     });
     cardCombinations.sort(() => Math.random() - 0.5);
 
+    const drawnCards = [];
+
     for (let i = 0; i < difficulty; i += 1) {
       const [power, suit] = cardCombinations.pop();
-      setCards((c) => [...c, { key: i, power: power, suit: suit }]);
+      drawnCards.push({ key: i, power: power, suit: suit });
     }
+
+    setCards(drawnCards);
   };
 
   return (
