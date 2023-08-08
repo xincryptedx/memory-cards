@@ -6,7 +6,12 @@ function CardTable({ cards }) {
   return (
     <section className={styles.cardTable}>
       {cards.map((card) => (
-        <Card key={card.key} power={card.power} suit={card.suit}></Card>
+        <Card
+          key={card.code}
+          power={card.value}
+          suit={card.suit}
+          image={card.images.svg}
+        ></Card>
       ))}
     </section>
   );
