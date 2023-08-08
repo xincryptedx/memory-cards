@@ -31,6 +31,7 @@ function App() {
           setScore={setScore}
           round={round}
           setRound={setRound}
+          setScene={setScene}
         ></GameScene>
       ) : null}
     </div>
