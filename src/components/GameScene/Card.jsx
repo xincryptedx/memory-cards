@@ -1,11 +1,8 @@
 /* eslint-disable react/prop-types */
-import useCardImage from "../../code/useCardImage";
 import styles from "./Card.module.css";
 
-function Card({ power, suit }) {
+function Card({ power, suit, image }) {
   const name = `${power} of ${suit}`;
-
-  const image = useCardImage(power, suit);
 
   return (
     <div className={styles.card}>
