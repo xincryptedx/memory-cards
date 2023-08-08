@@ -9,6 +9,7 @@ function App() {
   const [difficulty, setDifficulty] = useState(10);
   const [cards, setCards] = useState([]);
   const [score, setScore] = useState(0);
+  const [round, setRound] = useState(1);
 
   return (
     <div className={styles.appContainer}>
@@ -28,6 +29,8 @@ function App() {
           setCards={setCards}
           score={score}
           setScore={setScore}
+          round={round}
+          setRound={setRound}
         ></GameScene>
       ) : null}
     </div>
