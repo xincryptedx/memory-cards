@@ -4,23 +4,6 @@ import GitLinkHeader from "./components/GitLinkHeader/GitLinkHeader";
 import TitleScene from "./components/TitleScene/TitleScene";
 import GameScene from "./components/GameScene/GameScene";
 
-const powers = [
-  "Ace",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "Jack",
-  "Queen",
-  "King",
-];
-const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
-
 function App() {
   const [scene, setScene] = useState("Title");
   const [difficulty, setDifficulty] = useState(10);
@@ -28,21 +11,12 @@ function App() {
   const [score, setScore] = useState(0);
   const [round, setRound] = useState(1);
 
-  const getRandomCards = () => {
-    const cardCombinations = [];
-    powers.map((power) => {
-      suits.map((suit) => cardCombinations.push([power, suit]));
-    });
-    cardCombinations.sort(() => Math.random() - 0.5);
-
-    const drawnCards = [];
-
-    for (let i = 0; i < difficulty; i += 1) {
-      const [power, suit] = cardCombinations.pop();
-      drawnCards.push({ key: i, power: power, suit: suit });
-    }
-
-    setCards(drawnCards);
+  const getRandomCards = async () => {
+    const response = await fetch(
+      `https://deckofcardsapi.com/api/deck/new/draw/?count=${difficulty}`
+    );
+    const returnData = await response.json();
+    setCards(returnData.cards);
   };
 
   return (
