@@ -13,6 +13,7 @@ function GameScene({
   round,
   setRound,
   setScene,
+  getRandomCards,
 }) {
   return (
     <main className={styles.gameScene}>
@@ -21,6 +22,7 @@ function GameScene({
         setScore={setScore}
         setRound={setRound}
         setScene={setScene}
+        getRandomCards={getRandomCards}
       ></ControlPanel>
       <StatsPanel score={score} round={round}></StatsPanel>
       <CardTable
