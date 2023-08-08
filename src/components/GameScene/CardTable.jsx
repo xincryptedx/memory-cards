@@ -10,7 +10,7 @@ function CardTable({ cards }) {
           key={card.code}
           power={card.value}
           suit={card.suit}
-          image={card.images.svg}
+          image={card.image}
         ></Card>
       ))}
     </section>
