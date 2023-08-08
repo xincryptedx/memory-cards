@@ -1,11 +1,16 @@
 /* eslint-disable react/prop-types */
 import styles from "./TitleScene.module.css";
 
-function TitleScene({ setScene, difficulty, setDifficulty }) {
+function TitleScene({ setScene, difficulty, setDifficulty, getRandomCards }) {
+  const onPlay = () => {
+    getRandomCards();
+    setScene("Game");
+  };
+
   return (
     <main className={styles.titleScene}>
       <h1 className={styles.title}>Memory Cards</h1>
-      <button onClick={() => setScene("Game")} className={styles.playButton}>
+      <button onClick={onPlay} className={styles.playButton}>
         Play
       </button>
       <section className={styles.difficultySection}>
