@@ -7,6 +7,8 @@ import GameScene from "./components/GameScene/GameScene";
 function App() {
   const [scene, setScene] = useState("Title");
   const [difficulty, setDifficulty] = useState(10);
+  const [cards, setCards] = useState([]);
+  const [score, setScore] = useState(0);
 
   return (
     <div className={styles.appContainer}>
@@ -20,7 +22,13 @@ function App() {
           ></TitleScene>
         </>
       ) : scene === "Game" ? (
-        <GameScene difficulty={difficulty}></GameScene>
+        <GameScene
+          difficulty={difficulty}
+          cards={cards}
+          setCards={setCards}
+          score={score}
+          setScore={setScore}
+        ></GameScene>
       ) : null}
     </div>
   );
