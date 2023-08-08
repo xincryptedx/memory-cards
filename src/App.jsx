@@ -50,6 +50,7 @@ function App() {
             setScene={setScene}
             difficulty={difficulty}
             setDifficulty={setDifficulty}
+            getRandomCards={getRandomCards}
           ></TitleScene>
         </>
       ) : scene === "Game" ? (
@@ -62,6 +63,7 @@ function App() {
           round={round}
           setRound={setRound}
           setScene={setScene}
+          getRandomCards={getRandomCards}
         ></GameScene>
       ) : null}
     </div>
