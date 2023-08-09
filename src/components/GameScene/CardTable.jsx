@@ -3,8 +3,16 @@ import styles from "./CardTable.module.css";
 import Card from "./Card.jsx";
 import { useState } from "react";
 
-function CardTable({ cards }) {
+function CardTable({ cards, difficulty, setScore }) {
   const [chosenCards, setChosenCards] = useState([]);
+
+  const handleEndOfTurn = () => {
+    if (chosenCards.length === difficulty) {
+      // -Round is over so increment round state and start a new round
+    } else {
+      // -Else round is not over yet so randomize card positions on table
+    }
+  };
 
   return (
     <section className={styles.cardTable}>
@@ -14,8 +22,10 @@ function CardTable({ cards }) {
           power={card.value}
           suit={card.suit}
           image={card.image}
+          setScore={setScore}
           chosenCards={chosenCards}
           setChosenCards={setChosenCards}
+          handleEndOfTurn={handleEndOfTurn}
         ></Card>
       ))}
     </section>

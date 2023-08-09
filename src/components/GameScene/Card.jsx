@@ -6,11 +6,9 @@ function Card({
   power,
   suit,
   image,
-  score,
   setScore,
   chosenCards,
   setChosenCards,
-  difficulty,
   handleEndOfTurn,
 }) {
   const name = `${power} of ${suit}`;
