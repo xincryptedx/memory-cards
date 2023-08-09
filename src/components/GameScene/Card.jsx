@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import styles from "./Card.module.css";
 
 function Card({
@@ -12,6 +13,8 @@ function Card({
   handleEndOfTurn,
   onGameOver,
 }) {
+  const [mounted, setMounted] = useState(false);
+
   const name = `${power} of ${suit}`;
 
   const onChooseCard = () => {
@@ -25,8 +28,15 @@ function Card({
     }
   };
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <div className={styles.card} onClick={onChooseCard}>
+    <div
+      className={`${styles.card} ${mounted ? styles.faceUp : ""}`}
+      onClick={onChooseCard}
+    >
       <img src={image} alt={name} />
     </div>
   );
