@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from "./StatsPanel.module.css";
 
 function StatsPanel({ round, score, highScore }) {
