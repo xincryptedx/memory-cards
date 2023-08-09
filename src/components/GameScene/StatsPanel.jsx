@@ -1,16 +1,16 @@
 import styles from "./StatsPanel.module.css";
 
-function StatsPanel() {
+function StatsPanel({ round, score, highScore }) {
   return (
     <section className={styles.statsPanel}>
       <p className={styles.round}>
-        Round: <span></span>
+        Round: <span>{round}</span>
       </p>
       <p className={styles.score}>
-        Score: <span></span>
+        Score: <span>{score}</span>
       </p>
       <p className={styles.highScore}>
-        Best: <span></span>
+        Best: <span>{highScore}</span>
       </p>
     </section>
   );
