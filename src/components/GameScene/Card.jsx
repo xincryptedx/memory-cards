@@ -14,7 +14,6 @@ function Card({
   handleEndOfTurn,
   onGameOver,
   gameOver,
-  shuffling,
   faceUp,
   onCardMount,
   onCardDismount,
@@ -22,10 +21,10 @@ function Card({
   const name = `${power} of ${suit}`;
 
   const onChooseCard = () => {
-    // Check if the card is in chosenCards
-    if (chosenCards.includes(code) && !gameOver && !shuffling) {
+    // Check if the card is in chosenCards if face up and game not over
+    if (chosenCards.includes(code) && !gameOver && faceUp) {
       onGameOver();
-    } else if (!gameOver && !shuffling) {
+    } else if (!gameOver && faceUp) {
       setScore((p) => p + 1);
       setChosenCards((p) => [...p, code]);
       handleEndOfTurn();
