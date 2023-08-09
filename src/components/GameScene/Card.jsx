@@ -10,13 +10,14 @@ function Card({
   chosenCards,
   setChosenCards,
   handleEndOfTurn,
+  onGameOver,
 }) {
   const name = `${power} of ${suit}`;
 
   const onChooseCard = () => {
     // Check if the card is in chosenCards
     if (chosenCards.includes(code)) {
-      // End the game
+      onGameOver();
     } else {
       setScore((p) => p + 1);
       setChosenCards((p) => [...p, code]);
