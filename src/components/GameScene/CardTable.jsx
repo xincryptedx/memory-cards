@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./CardTable.module.css";
 import Card from "./Card.jsx";
 
@@ -15,6 +15,7 @@ function CardTable({
   onGameOver,
 }) {
   const [faceUp, setFaceUp] = useState(false);
+  const cardCountRef = useRef(0);
 
   const handleEndOfTurn = () => {
     if (chosenCards.length + 1 === difficulty) {
@@ -41,7 +42,9 @@ function CardTable({
           setChosenCards={setChosenCards}
           handleEndOfTurn={handleEndOfTurn}
           onGameOver={onGameOver}
+          cardCountRef={cardCountRef}
           faceUp={faceUp}
+          setFaceUp={setFaceUp}
         ></Card>
       ))}
     </section>
