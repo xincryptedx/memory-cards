@@ -38,8 +38,8 @@ function Card({
       className={`${styles.card} ${mounted ? styles.faceUp : ""}`}
       onClick={onChooseCard}
     >
-      <img src={image} alt={name} />
-      <img src={cardBackSrc} alt="" />
+      <img className={styles.front} src={image} alt={name} />
+      <img className={styles.back} src={cardBackSrc} alt="" />
     </div>
   );
 }
