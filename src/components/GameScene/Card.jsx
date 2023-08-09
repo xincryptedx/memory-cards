@@ -25,7 +25,7 @@ function Card({
   };
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={onChooseCard}>
       <img src={image} alt={name} />
     </div>
   );
