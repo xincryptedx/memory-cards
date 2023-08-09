@@ -31,7 +31,7 @@ function Card({
 
   useEffect(() => {
     setFaceUp(true);
-  }, []);
+  }, [setFaceUp]);
 
   return (
     <div
