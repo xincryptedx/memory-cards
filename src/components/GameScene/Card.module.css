@@ -7,9 +7,11 @@
   aspect-ratio: 2.5 / 3.5;
 
   margin: 10px;
-  transform: rotate3d(0, 1, 0, -180deg);
-  transition: transform 0.5s ease-in-out;
+
   position: relative;
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
 }
 
 .card img {
@@ -17,9 +19,23 @@
   width: 100%;
 }
 
-.faceUp {
-  transform: rotate3d(0, 1, 0, 0deg);
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(1px);
 }
 
 .back {
+  transform: rotateY(180deg) translateZ(-1px);
+}
+
+.card.faceUp .cardInner {
+  transform: rotateY(0deg);
 }

@@ -34,8 +34,11 @@ function Card({
   }, []);
 
   return (
-    <div className={styles.card} onClick={onChooseCard}>
-      <div className={`${styles.cardInner} ${mounted ? styles.faceUp : ""}`}>
+    <div
+      className={`${styles.card} ${mounted ? styles.faceUp : ""}`}
+      onClick={onChooseCard}
+    >
+      <div className={styles.cardInner}>
         <img className={styles.front} src={image} alt={name} />
         <img className={styles.back} src={cardBackSrc} alt="" />
       </div>
