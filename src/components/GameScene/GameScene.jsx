@@ -46,6 +46,7 @@ function GameScene({
       <CardTable
         difficulty={difficulty}
         cards={cards}
+        setCards={setCards}
         setScore={setScore}
         chosenCards={chosenCards}
         setChosenCards={setChosenCards}
