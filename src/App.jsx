@@ -44,7 +44,7 @@ function App() {
           setRound={setRound}
           setScene={setScene}
           getRandomCards={getRandomCards}
-          cardBack={cardBackSrc}
+          cardBackSrc={cardBackSrc}
         ></GameScene>
       ) : null}
     </div>
