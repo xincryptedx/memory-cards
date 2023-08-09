@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import styles from "./CardTable.module.css";
 import Card from "./Card.jsx";
 
@@ -15,7 +15,7 @@ function CardTable({
   onGameOver,
 }) {
   const [faceUp, setFaceUp] = useState(false);
-  const cardCount = useRef(0);
+  const [cardCount, setCardCount] = useState(0);
 
   const handleEndOfTurn = () => {
     if (chosenCards.length + 1 === difficulty) {
@@ -28,11 +28,15 @@ function CardTable({
   };
 
   const onCardMount = () => {
-    cardCount.current += 1;
+    setCardCount((p) => p + 1);
+  };
+
+  const onCardDismount = () => {
+    setCardCount((p) => p - 1);
   };
 
   useEffect(() => {
-    if (cardCount.current >= difficulty) {
+    if (cardCount >= difficulty) {
       setFaceUp(true);
     }
   }, [cardCount, difficulty]);
@@ -54,6 +58,7 @@ function CardTable({
           onGameOver={onGameOver}
           faceUp={faceUp}
           onCardMount={onCardMount}
+          onCardDismount={onCardDismount}
         ></Card>
       ))}
     </section>

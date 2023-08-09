@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useEffect } from "react";
 import styles from "./Card.module.css";
 
 function Card({
@@ -13,6 +14,8 @@ function Card({
   handleEndOfTurn,
   onGameOver,
   faceUp,
+  onCardMount,
+  onCardDismount,
 }) {
   const name = `${power} of ${suit}`;
 
@@ -26,6 +29,13 @@ function Card({
       handleEndOfTurn();
     }
   };
+
+  useEffect(() => {
+    onCardMount();
+    return () => {
+      onCardDismount();
+    };
+  }, [onCardMount, onCardDismount]);
 
   return (
     <div
