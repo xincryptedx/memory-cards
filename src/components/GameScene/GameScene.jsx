@@ -49,6 +49,7 @@ function GameScene({
         setScore={setScore}
         chosenCards={chosenCards}
         setChosenCards={setChosenCards}
+        onNextRound={onNextRound}
       ></CardTable>
     </main>
   );
