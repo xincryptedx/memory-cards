@@ -15,6 +15,7 @@ function GameScene({
   setRound,
   setScene,
   getRandomCards,
+  cardBackSrc,
 }) {
   const [chosenCards, setChosenCards] = useState([]);
 
@@ -51,6 +52,7 @@ function GameScene({
       <CardTable
         difficulty={difficulty}
         cards={cards}
+        cardBackSrc={cardBackSrc}
         setCards={setCards}
         setScore={setScore}
         chosenCards={chosenCards}
