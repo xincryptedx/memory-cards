@@ -7,6 +7,7 @@ function Card({
   power,
   suit,
   image,
+  cardBackSrc,
   setScore,
   chosenCards,
   setChosenCards,
@@ -38,6 +39,7 @@ function Card({
       onClick={onChooseCard}
     >
       <img src={image} alt={name} />
+      <img src={cardBackSrc} alt="" />
     </div>
   );
 }
