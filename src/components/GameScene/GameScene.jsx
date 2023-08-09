@@ -33,6 +33,12 @@ function GameScene({
     setScene("Title");
   };
 
+  const onNextRound = () => {
+    setRound((p) => p + 1);
+    setChosenCards([]);
+    getRandomCards();
+  };
+
   return (
     <main className={styles.gameScene}>
       <ControlPanel onNewGame={onNewGame} onQuit={onQuit}></ControlPanel>
