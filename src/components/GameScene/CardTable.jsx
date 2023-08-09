@@ -3,9 +3,13 @@ import styles from "./CardTable.module.css";
 import Card from "./Card.jsx";
 import { useState } from "react";
 
-function CardTable({ cards, difficulty, setScore }) {
-  const [chosenCards, setChosenCards] = useState([]);
-
+function CardTable({
+  cards,
+  difficulty,
+  setScore,
+  chosenCards,
+  setChosenCards,
+}) {
   const handleEndOfTurn = () => {
     if (chosenCards.length === difficulty) {
       // -Round is over so increment round state and start a new round

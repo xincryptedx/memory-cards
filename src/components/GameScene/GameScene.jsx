@@ -3,6 +3,7 @@ import CardTable from "./CardTable";
 import ControlPanel from "./ControlPanel";
 import styles from "./GameScene.module.css";
 import StatsPanel from "./StatsPanel";
+import { useState } from "react";
 
 function GameScene({
   difficulty,
@@ -15,9 +16,12 @@ function GameScene({
   setScene,
   getRandomCards,
 }) {
+  const [chosenCards, setChosenCards] = useState([]);
+
   const onNewGame = () => {
     setScore(0);
     setRound(1);
+    setChosenCards([]);
     getRandomCards();
   };
 
@@ -25,6 +29,7 @@ function GameScene({
     setCards([]);
     setScore(0);
     setRound(1);
+    setChosenCards([]);
     setScene("Title");
   };
 
@@ -36,6 +41,8 @@ function GameScene({
         difficulty={difficulty}
         cards={cards}
         setScore={setScore}
+        chosenCards={chosenCards}
+        setChosenCards={setChosenCards}
       ></CardTable>
     </main>
   );
