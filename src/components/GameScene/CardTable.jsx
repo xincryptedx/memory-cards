@@ -12,7 +12,7 @@ function CardTable({
   onNextRound,
 }) {
   const handleEndOfTurn = () => {
-    if (chosenCards.length === difficulty) {
+    if (chosenCards.length + 1 === difficulty) {
       onNextRound();
     } else {
       const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
