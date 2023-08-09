@@ -43,6 +43,7 @@ function CardTable({
           handleEndOfTurn={handleEndOfTurn}
           onGameOver={onGameOver}
           cardCountRef={cardCountRef}
+          difficulty={difficulty}
           faceUp={faceUp}
           setFaceUp={setFaceUp}
         ></Card>
