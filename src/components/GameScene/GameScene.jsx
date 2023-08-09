@@ -28,7 +28,6 @@ function GameScene({
       <CardTable
         difficulty={difficulty}
         cards={cards}
-        setCards={setCards}
         setScore={setScore}
       ></CardTable>
     </main>

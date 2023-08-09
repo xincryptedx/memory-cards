@@ -19,6 +19,7 @@ function CardTable({ cards, difficulty, setScore }) {
       {cards.map((card) => (
         <Card
           key={card.code}
+          code={card.code}
           power={card.value}
           suit={card.suit}
           image={card.image}
