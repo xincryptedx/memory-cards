@@ -19,7 +19,7 @@ function App() {
     setCards(returnData.cards);
   };
 
-  const cardBack = "https://www.deckofcardsapi.com/static/img/back.png";
+  const cardBackSrc = "https://www.deckofcardsapi.com/static/img/back.png";
 
   return (
     <div className={styles.appContainer}>
@@ -44,7 +44,7 @@ function App() {
           setRound={setRound}
           setScene={setScene}
           getRandomCards={getRandomCards}
-          cardBack={cardBack}
+          cardBack={cardBackSrc}
         ></GameScene>
       ) : null}
     </div>
