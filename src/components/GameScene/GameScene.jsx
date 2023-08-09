@@ -18,12 +18,14 @@ function GameScene({
   cardBackSrc,
 }) {
   const [chosenCards, setChosenCards] = useState([]);
+  const [gameOver, setGameOver] = useState(false);
 
   const onNewGame = () => {
     setScore(0);
     setRound(1);
     setChosenCards([]);
     getRandomCards();
+    setGameOver(false);
   };
 
   const onQuit = () => {
@@ -41,7 +43,7 @@ function GameScene({
   };
 
   const onGameOver = () => {
-    // Do fluff stuff
+    setGameOver(true);
     onNewGame();
   };
 
@@ -59,6 +61,7 @@ function GameScene({
         setChosenCards={setChosenCards}
         onNextRound={onNextRound}
         onGameOver={onGameOver}
+        gameOver={gameOver}
       ></CardTable>
     </main>
   );
