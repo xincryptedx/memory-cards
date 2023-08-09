@@ -1,6 +1,6 @@
 import styles from "./GitLinkHeader.module.css";
-import gitIcon from "/home/jrbarnhart/repos/memory-cards/src/assets/github-mark.svg";
-import doubleDownArrowIcon from "/home/jrbarnhart/repos/memory-cards/src/assets/double-arrow-down.svg";
+import gitIcon from "../../assets/github-mark.svg";
+import doubleDownArrowIcon from "../../assets/double-arrow-down.svg";
 import { useState } from "react";
 
 const link = "https://github.com/xincryptedx/memory-cards";
