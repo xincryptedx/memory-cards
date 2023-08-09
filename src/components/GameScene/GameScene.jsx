@@ -15,15 +15,22 @@ function GameScene({
   setScene,
   getRandomCards,
 }) {
+  const onNewGame = () => {
+    setScore(0);
+    setRound(1);
+    getRandomCards();
+  };
+
+  const onQuit = () => {
+    setCards([]);
+    setScore(0);
+    setRound(1);
+    setScene("Title");
+  };
+
   return (
     <main className={styles.gameScene}>
-      <ControlPanel
-        setCards={setCards}
-        setScore={setScore}
-        setRound={setRound}
-        setScene={setScene}
-        getRandomCards={getRandomCards}
-      ></ControlPanel>
+      <ControlPanel onNewGame={onNewGame} onQuit={onQuit}></ControlPanel>
       <StatsPanel score={score} round={round}></StatsPanel>
       <CardTable
         difficulty={difficulty}
