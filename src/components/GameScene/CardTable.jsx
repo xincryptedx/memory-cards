@@ -4,16 +4,19 @@ import Card from "./Card.jsx";
 
 function CardTable({
   cards,
+  setCards,
   difficulty,
   setScore,
   chosenCards,
   setChosenCards,
+  onNextRound,
 }) {
   const handleEndOfTurn = () => {
     if (chosenCards.length === difficulty) {
-      // -Round is over so increment round state and start a new round
+      onNextRound();
     } else {
-      // -Else round is not over yet so randomize card positions on table
+      const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
+      setCards(shuffledCards);
     }
   };
 
