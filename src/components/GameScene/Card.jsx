@@ -2,7 +2,7 @@
 import styles from "./Card.module.css";
 
 function Card({
-  key,
+  code,
   power,
   suit,
   image,
@@ -15,11 +15,11 @@ function Card({
 
   const onChooseCard = () => {
     // Check if the card is in chosenCards
-    if (chosenCards.includes(key)) {
+    if (chosenCards.includes(code)) {
       // End the game
     } else {
       setScore((p) => p + 1);
-      setChosenCards((p) => [...p, key]);
+      setChosenCards((p) => [...p, code]);
       handleEndOfTurn();
     }
   };
