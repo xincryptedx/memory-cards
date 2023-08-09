@@ -10,6 +10,7 @@ function CardTable({
   chosenCards,
   setChosenCards,
   onNextRound,
+  onGameOver,
 }) {
   const handleEndOfTurn = () => {
     if (chosenCards.length + 1 === difficulty) {
@@ -33,6 +34,7 @@ function CardTable({
           chosenCards={chosenCards}
           setChosenCards={setChosenCards}
           handleEndOfTurn={handleEndOfTurn}
+          onGameOver={onGameOver}
         ></Card>
       ))}
     </section>
