@@ -39,6 +39,11 @@ function GameScene({
     getRandomCards();
   };
 
+  const onGameOver = () => {
+    // Do fluff stuff
+    onNewGame();
+  };
+
   return (
     <main className={styles.gameScene}>
       <ControlPanel onNewGame={onNewGame} onQuit={onQuit}></ControlPanel>
@@ -51,6 +56,7 @@ function GameScene({
         chosenCards={chosenCards}
         setChosenCards={setChosenCards}
         onNextRound={onNextRound}
+        onGameOver={onGameOver}
       ></CardTable>
     </main>
   );
