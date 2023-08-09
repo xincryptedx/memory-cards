@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import styles from "./CardTable.module.css";
 import Card from "./Card.jsx";
 
+const cardFlipDelay = 500;
+
 function CardTable({
   cards,
   setCards,
@@ -15,15 +17,17 @@ function CardTable({
   onGameOver,
 }) {
   const [faceUp, setFaceUp] = useState(false);
+  const [isShuffling, setIsShufflling] = useState(false);
   const [cardCount, setCardCount] = useState(0);
 
   const handleEndOfTurn = () => {
     if (chosenCards.length + 1 === difficulty) {
       onNextRound();
     } else {
-      const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
-      // Animate card flip
-      setCards(shuffledCards);
+      setFaceUp(false);
+      setTimeout(() => {
+        setIsShufflling(true);
+      }, cardFlipDelay);
     }
   };
 
@@ -40,6 +44,19 @@ function CardTable({
       setFaceUp(true);
     }
   }, [cardCount, difficulty]);
+
+  useEffect(() => {
+    if (isShuffling) {
+      const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
+      setCards(shuffledCards);
+      setIsShufflling(false);
+    }
+    if (!isShuffling) {
+      setTimeout(() => {
+        setFaceUp(true);
+      }, cardFlipDelay);
+    }
+  }, [isShuffling, cards, setCards]);
 
   return (
     <section className={styles.cardTable}>
