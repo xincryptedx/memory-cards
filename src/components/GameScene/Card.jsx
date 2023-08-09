@@ -13,6 +13,8 @@ function Card({
   setChosenCards,
   handleEndOfTurn,
   onGameOver,
+  gameOver,
+  shuffling,
   faceUp,
   onCardMount,
   onCardDismount,
@@ -21,9 +23,9 @@ function Card({
 
   const onChooseCard = () => {
     // Check if the card is in chosenCards
-    if (chosenCards.includes(code)) {
+    if (chosenCards.includes(code) && !gameOver && !shuffling) {
       onGameOver();
-    } else {
+    } else if (!gameOver && !shuffling) {
       setScore((p) => p + 1);
       setChosenCards((p) => [...p, code]);
       handleEndOfTurn();
