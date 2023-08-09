@@ -5,6 +5,7 @@ import Card from "./Card.jsx";
 function CardTable({
   cards,
   setCards,
+  cardBackSrc,
   difficulty,
   setScore,
   chosenCards,
@@ -31,6 +32,7 @@ function CardTable({
           power={card.value}
           suit={card.suit}
           image={card.image}
+          cardBackSrc={cardBackSrc}
           setScore={setScore}
           chosenCards={chosenCards}
           setChosenCards={setChosenCards}
