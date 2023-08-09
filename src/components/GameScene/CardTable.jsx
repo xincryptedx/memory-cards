@@ -15,6 +15,7 @@ function CardTable({
   setChosenCards,
   onNextRound,
   onGameOver,
+  gameOver,
 }) {
   const [faceUp, setFaceUp] = useState(false);
   const [isShuffling, setIsShufflling] = useState(false);
@@ -73,6 +74,7 @@ function CardTable({
           setChosenCards={setChosenCards}
           handleEndOfTurn={handleEndOfTurn}
           onGameOver={onGameOver}
+          gameOver={gameOver}
           faceUp={faceUp}
           onCardMount={onCardMount}
           onCardDismount={onCardDismount}
