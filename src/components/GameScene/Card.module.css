@@ -1,10 +1,15 @@
 .card {
+  perspective: 1000px;
+}
+
+.cardInner {
   width: 130px;
   aspect-ratio: 2.5 / 3.5;
 
   margin: 10px;
   transform: rotate3d(0, 1, 0, -180deg);
   transition: transform 0.5s ease-in-out;
+  position: relative;
 }
 
 .card img {
@@ -14,4 +19,7 @@
 
 .faceUp {
   transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.back {
 }
