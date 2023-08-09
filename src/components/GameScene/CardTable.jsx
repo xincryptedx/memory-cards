@@ -41,23 +41,17 @@ function CardTable({
   };
 
   useEffect(() => {
-    if (cardCount >= difficulty) {
-      setFaceUp(true);
-    }
-  }, [cardCount, difficulty]);
-
-  useEffect(() => {
     if (isShuffling) {
       const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
       setCards(shuffledCards);
       setIsShufflling(false);
     }
-    if (!isShuffling) {
+    if (!isShuffling && cardCount >= difficulty) {
       setTimeout(() => {
         setFaceUp(true);
       }, cardFlipDelay);
     }
-  }, [isShuffling, cards, setCards]);
+  }, [isShuffling, cards, setCards, cardCount, difficulty]);
 
   return (
     <section className={styles.cardTable}>
