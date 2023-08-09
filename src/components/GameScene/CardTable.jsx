@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import styles from "./CardTable.module.css";
 import Card from "./Card.jsx";
 
@@ -13,6 +14,8 @@ function CardTable({
   onNextRound,
   onGameOver,
 }) {
+  const [faceUp, setFaceUp] = useState(false);
+
   const handleEndOfTurn = () => {
     if (chosenCards.length + 1 === difficulty) {
       onNextRound();
@@ -38,6 +41,7 @@ function CardTable({
           setChosenCards={setChosenCards}
           handleEndOfTurn={handleEndOfTurn}
           onGameOver={onGameOver}
+          faceUp={faceUp}
         ></Card>
       ))}
     </section>
