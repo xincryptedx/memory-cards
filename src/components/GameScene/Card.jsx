@@ -38,6 +38,12 @@ function Card({
     }
   };
 
+  const onKeyboardEnter = (e) => {
+    if (e.key === " " || e.key === "Enter" || e.key === "Spacebar") {
+      onChooseCard();
+    }
+  };
+
   useEffect(() => {
     setMountedCards((p) => p + 1);
     return () => setMountedCards((p) => p - 1);
@@ -49,6 +55,7 @@ function Card({
       onClick={onChooseCard}
       role="button"
       tabIndex={0}
+      onKeyDown={onKeyboardEnter}
     >
       <div className={styles.cardInner}>
         <img className={styles.front} src={image} alt={name} />
