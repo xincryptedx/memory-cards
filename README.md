@@ -12,14 +12,13 @@ Try the game [](here). (NYI)
 - Click on a card you haven't selected before
 - Continue selecting cards without repeating
 - If you select a card you've already chosen, the game ends
-- Select all cards once to win
+- Select all cards once to win the round and begin the next
 
 ## Implementation Details
 
 - Functional components with React Hooks for state management
 - UseState and UseEffect hooks to track selections, score and fetch API data
 - External Deck of Cards API request with Fetch
-- Shuffle array utility to randomize card order
 - Game logic checks for determing win/lose conditions and tracking score
 - Variable game difficulty allowing for different numbers of cards
 
