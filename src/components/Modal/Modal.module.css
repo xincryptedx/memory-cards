@@ -18,24 +18,29 @@
   top: calc(50% - 50px);
   left: calc(50% - 100px);
 
-  background-color: var(--primary_2);
-  border: 2px solid var(--primary_1);
+  background-color: var(--primary_1);
+  border: 2px solid var(--secondary_2);
   border-radius: 5px;
+
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
 
   padding: 10px;
 }
 
 .modal p {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(90, 90, 90);
+  color: var(--font_dark);
 }
 
 .modal button {
-  color: var(--font_1);
+  color: var(--font_light);
   font-weight: bold;
-  background-color: var(--primary_1);
+  text-shadow: 1px 1px 1px rgb(43, 43, 43);
+  background-color: var(--secondary_1);
   border: 2px solid var(--primary_2);
   border-radius: 5px;
   width: 125px;
@@ -43,10 +48,10 @@
 }
 
 .modal button:hover {
-  background-color: var(--primary_3);
-  border-color: var(--primary_1);
+  background-color: var(--secondary_2);
 }
 
 .modal button:active {
   background-color: var(--primary_2);
+  border-color: var(--primary_0);
 }
