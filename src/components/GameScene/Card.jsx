@@ -12,8 +12,8 @@ function Card({
   chosenCards,
   setChosenCards,
   handleEndOfTurn,
-  onGameOver,
   gameOver,
+  setGameOver,
   faceUp,
   setMountedCards,
 }) {
@@ -22,7 +22,7 @@ function Card({
   const onChooseCard = () => {
     // Check if the card is in chosenCards if face up and game not over
     if (chosenCards.includes(code) && !gameOver && faceUp) {
-      onGameOver();
+      setGameOver(true);
     } else if (!gameOver && faceUp) {
       setScore((p) => p + 1);
       setChosenCards((p) => [...p, code]);
