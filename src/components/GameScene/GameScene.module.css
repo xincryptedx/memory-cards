@@ -3,7 +3,7 @@
   flex-direction: column;
 
   width: 100%;
-  max-width: 1200px;
+  max-width: 850px;
 
   background-color: var(--background_2);
   overflow: hidden;
