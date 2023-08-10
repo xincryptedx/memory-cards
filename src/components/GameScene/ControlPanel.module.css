@@ -31,3 +31,11 @@
 .quitButton {
   grid-area: quit;
 }
+
+@media only screen and (min-width: 768px) {
+  .controlPanel button {
+    height: 75px;
+    width: 115px;
+    font-size: 1.2rem;
+  }
+}
