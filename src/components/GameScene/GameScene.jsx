@@ -25,6 +25,7 @@ function GameScene({
   const [chosenCards, setChosenCards] = useState([]);
   const [gameOver, setGameOver] = useState(false);
   const [gameOverModalOpen, setGameOverModalOpen] = useState(false);
+  const [helpModalOpen, setHelpModalOpen] = useState(false);
 
   const cardFlipDelay = 500;
 
@@ -65,7 +66,21 @@ function GameScene({
           ></GameOverModalContent>
         </Modal>
       ) : null}
-      <ControlPanel onNewGame={onNewGame} onQuit={onQuit}></ControlPanel>
+      {helpModalOpen ? (
+        <Modal>
+          <GameOverModalContent
+            setGameOverModalOpen={setGameOverModalOpen}
+            message={"Game Over"}
+            onQuit={onQuit}
+            onNewGame={onNewGame}
+          ></GameOverModalContent>
+        </Modal>
+      ) : null}
+      <ControlPanel
+        onNewGame={onNewGame}
+        onQuit={onQuit}
+        setHelpModalOpen={setHelpModalOpen}
+      ></ControlPanel>
       <StatsPanel
         score={score}
         highScore={highScore}
