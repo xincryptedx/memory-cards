@@ -6,6 +6,7 @@ import StatsPanel from "./StatsPanel";
 import { useState } from "react";
 import Modal from "../Modal/Modal";
 import GameOverModalContent from "../Modal/GameOverModalContent";
+import HelpModalContent from "../Modal/HelpModalContent";
 
 function GameScene({
   difficulty,
@@ -68,12 +69,9 @@ function GameScene({
       ) : null}
       {helpModalOpen ? (
         <Modal>
-          <GameOverModalContent
-            setGameOverModalOpen={setGameOverModalOpen}
-            message={"Game Over"}
-            onQuit={onQuit}
-            onNewGame={onNewGame}
-          ></GameOverModalContent>
+          <HelpModalContent
+            setHelpModalOpen={setHelpModalOpen}
+          ></HelpModalContent>
         </Modal>
       ) : null}
       <ControlPanel
