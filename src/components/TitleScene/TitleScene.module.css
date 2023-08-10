@@ -99,3 +99,48 @@ button.difficultySelected {
   color: var(--secondary_2);
   border-color: var(--secondary_2);
 }
+
+@media only screen and (min-width: 768px) {
+  .titleScene {
+    grid-template: 50px repeat(3, min-content) 1fr / 1fr;
+    grid-template-areas:
+      "."
+      "title"
+      "play"
+      "difficulty"
+      ".";
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .title::before,
+  .title::after {
+    width: 20px;
+    height: 4px;
+    transform: translateY(-20px);
+    margin: 0 16px;
+  }
+
+  .playButton {
+    grid-area: play;
+
+    height: 90px;
+    width: 200px;
+
+    margin-top: 60px;
+    margin-bottom: 50px;
+
+    font-size: 2rem;
+  }
+
+  .difficultySection p {
+    font-size: 1.5rem;
+  }
+
+  .difficultySection button {
+    height: 60px;
+    width: 250px;
+  }
+}
