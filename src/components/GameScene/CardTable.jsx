@@ -8,6 +8,7 @@ function CardTable({
   setCards,
   cardBackSrc,
   difficulty,
+  score,
   setScore,
   highScore,
   setHighScore,
@@ -89,6 +90,7 @@ function CardTable({
           suit={card.suit}
           image={card.image}
           cardBackSrc={cardBackSrc}
+          score={score}
           setScore={setScore}
           highScore={highScore}
           setHighScore={setHighScore}

@@ -8,7 +8,10 @@ function Card({
   suit,
   image,
   cardBackSrc,
+  score,
   setScore,
+  highScore,
+  setHighScore,
   chosenCards,
   setChosenCards,
   handleEndOfTurn,
@@ -27,6 +30,9 @@ function Card({
       setGameOverModalOpen(true);
     } else if (!gameOver && faceUp) {
       setScore((p) => p + 1);
+      if (score + 1 > highScore) {
+        setHighScore(score + 1);
+      }
       setChosenCards((p) => [...p, code]);
       handleEndOfTurn();
     }

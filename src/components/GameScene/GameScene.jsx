@@ -76,6 +76,7 @@ function GameScene({
         cards={cards}
         setCards={setCards}
         cardBackSrc={cardBackSrc}
+        score={score}
         setScore={setScore}
         highScore={highScore}
         setHighScore={setHighScore}
