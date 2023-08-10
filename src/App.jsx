@@ -1,5 +1,5 @@
 import styles from "./App.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GitLinkHeader from "./components/GitLinkHeader/GitLinkHeader";
 import TitleScene from "./components/TitleScene/TitleScene";
 import GameScene from "./components/GameScene/GameScene";
@@ -10,6 +10,15 @@ function App() {
   const [cards, setCards] = useState([]);
   const [score, setScore] = useState(0);
   const [round, setRound] = useState(1);
+  const [highScore, setHighScore] = useState(0);
+
+  // Check for a high score exiting already on mount
+  useEffect(() => {
+    const localHighScore = localStorage.getItem("highScore");
+    if (localHighScore) {
+      setHighScore(localHighScore);
+    }
+  }, []);
 
   const getRandomCards = async () => {
     const response = await fetch(
@@ -40,6 +49,8 @@ function App() {
           setCards={setCards}
           score={score}
           setScore={setScore}
+          highScore={highScore}
+          setHighScore={setHighScore}
           round={round}
           setRound={setRound}
           setScene={setScene}
