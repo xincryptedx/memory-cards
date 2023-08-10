@@ -11,8 +11,9 @@
 .modal {
   display: grid;
   justify-items: center;
+  row-gap: 15px;
 
-  height: 100px;
+  height: minmax(100px, min-content);
   width: 200px;
 
   position: fixed;
@@ -29,12 +30,21 @@
   padding: 10px;
 }
 
+.modal h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  filter: drop-shadow(1px 1px 1px grey);
+  color: var(--font_dark);
+}
+
 .modal p {
   margin: 0;
   font-size: 1.2rem;
   font-weight: bold;
   filter: drop-shadow(1px 1px 1px grey);
   color: var(--font_dark);
+  justify-self: start;
 }
 
 .modal button {
@@ -54,14 +64,18 @@
 
 @media only screen and (min-width: 768px) {
   .modal {
-    height: 200px;
+    height: minmax(200px, min-content);
     width: 400px;
     top: calc(50% - 100px);
     left: calc(50% - 200px);
   }
 
+  .modal h1 {
+    font-size: 2rem;
+  }
+
   .modal p {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 
   .modal button {

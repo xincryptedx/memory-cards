@@ -12,7 +12,7 @@ function GameOverModalContent({
 
   return (
     <>
-      <p>{message}</p>
+      <h1>{message}</h1>
       <button onClick={() => onModalEvent(onNewGame)}>New Game</button>
       <button onClick={() => onModalEvent(onQuit)}>Quit</button>
     </>

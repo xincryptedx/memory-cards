@@ -2,11 +2,9 @@
 function HelpModalContent({ setHelpModalOpen }) {
   return (
     <>
-      <h1>How to Play</h1>
-      <p>{`-Click or tap a card to get a point.
-             -If you click or tap a card more than once, you lose!
-             -Click or tap all cards once to win the round.
-             -Keep going to see how high of a score you can get!`}</p>
+      <p>-Tap every card once.</p>
+      <p>-Tap the same card twice and you lose!</p>
+      <p>-New round starts when all cards tapped.</p>
       <button onClick={() => setHelpModalOpen(false)}>OK</button>
     </>
   );
