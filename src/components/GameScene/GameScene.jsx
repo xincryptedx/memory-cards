@@ -4,6 +4,7 @@ import ControlPanel from "./ControlPanel";
 import styles from "./GameScene.module.css";
 import StatsPanel from "./StatsPanel";
 import { useState } from "react";
+import Modal from "../Modal/Modal";
 
 function GameScene({
   difficulty,
@@ -19,6 +20,7 @@ function GameScene({
 }) {
   const [chosenCards, setChosenCards] = useState([]);
   const [gameOver, setGameOver] = useState(false);
+  const [gameOverModalOpen, setGameOverModalOpen] = useState(false);
 
   const onNewGame = () => {
     setScore(0);
@@ -44,6 +46,11 @@ function GameScene({
 
   return (
     <main className={styles.gameScene}>
+      {gameOverModalOpen ? (
+        <Modal>
+          <p>MODAL!</p>
+        </Modal>
+      ) : null}
       <ControlPanel onNewGame={onNewGame} onQuit={onQuit}></ControlPanel>
       <StatsPanel score={score} round={round}></StatsPanel>
       <CardTable
@@ -57,6 +64,7 @@ function GameScene({
         onNextRound={onNextRound}
         setGameOver={setGameOver}
         gameOver={gameOver}
+        setGameOverModalOpen={setGameOverModalOpen}
       ></CardTable>
     </main>
   );
