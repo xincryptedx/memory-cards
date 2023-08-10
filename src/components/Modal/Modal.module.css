@@ -5,6 +5,7 @@
   left: 0;
   height: 100vh;
   width: 100%;
+  z-index: 1;
 }
 
 .modal {
@@ -18,8 +19,8 @@
   top: calc(50% - 50px);
   left: calc(50% - 100px);
 
-  background-color: var(--primary_1);
-  border: 2px solid var(--secondary_2);
+  background-color: var(--secondary_1);
+  border: 2px solid var(--primary_2);
   border-radius: 5px;
 
   color: white;
@@ -32,28 +33,23 @@
   margin: 0;
   font-size: 1.2rem;
   font-weight: bold;
-  text-shadow: 1px 1px 1px rgb(34, 34, 34);
-  color: var(--font_light);
+  filter: drop-shadow(1px 1px 1px grey);
+  color: var(--font_dark);
 }
 
 .modal button {
   color: var(--font_light);
   font-weight: bold;
   text-shadow: 1px 1px 1px rgb(34, 34, 34);
-  background-color: var(--secondary_1);
-  border: 2px solid var(--primary_2);
+  background-color: var(--primary_1);
+  border: 2px solid var(--secondary_2);
   border-radius: 5px;
   width: 125px;
   height: 30px;
 }
 
 .modal button:hover {
-  background-color: var(--secondary_2);
-}
-
-.modal button:active {
   background-color: var(--primary_2);
-  border-color: var(--primary_0);
 }
 
 @media only screen and (min-width: 768px) {
@@ -65,7 +61,7 @@
   }
 
   .modal p {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
   }
 
   .modal button {
