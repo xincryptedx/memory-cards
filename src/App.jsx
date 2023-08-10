@@ -20,6 +20,11 @@ function App() {
     }
   }, []);
 
+  // Set new high score to local storage
+  useEffect(() => {
+    localStorage.setItem("highScore", highScore);
+  }, [highScore]);
+
   const getRandomCards = async () => {
     const response = await fetch(
       `https://deckofcardsapi.com/api/deck/new/draw/?count=${difficulty}`
