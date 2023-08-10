@@ -50,6 +50,7 @@ function GameScene({
       {gameOverModalOpen ? (
         <Modal>
           <GameOverModalContent
+            setGameOverModalOpen={setGameOverModalOpen}
             message={"Game Over"}
             onQuit={onQuit}
             onNewGame={onNewGame}
