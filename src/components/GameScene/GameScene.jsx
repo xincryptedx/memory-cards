@@ -62,8 +62,8 @@ function GameScene({
         chosenCards={chosenCards}
         setChosenCards={setChosenCards}
         onNextRound={onNextRound}
-        setGameOver={setGameOver}
         gameOver={gameOver}
+        setGameOver={setGameOver}
         setGameOverModalOpen={setGameOverModalOpen}
       ></CardTable>
     </main>
