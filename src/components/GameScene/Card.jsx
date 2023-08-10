@@ -14,7 +14,6 @@ function Card({
   onGameOver,
   gameOver,
   faceUp,
-  incrementImageLoaded,
 }) {
   const name = `${power} of ${suit}`;
 
@@ -35,18 +34,8 @@ function Card({
       onClick={onChooseCard}
     >
       <div className={styles.cardInner}>
-        <img
-          className={styles.front}
-          src={image}
-          alt={name}
-          onLoad={incrementImageLoaded}
-        />
-        <img
-          className={styles.back}
-          src={cardBackSrc}
-          alt=""
-          onLoad={incrementImageLoaded}
-        />
+        <img className={styles.front} src={image} alt={name} />
+        <img className={styles.back} src={cardBackSrc} alt="" />
       </div>
     </div>
   );

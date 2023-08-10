@@ -19,7 +19,6 @@ function CardTable({
 }) {
   const [faceUp, setFaceUp] = useState(false);
   const [isShuffling, setIsShufflling] = useState(false);
-  const [cardCount, setCardCount] = useState(0);
 
   const handleEndOfTurn = () => {
     if (chosenCards.length + 1 === difficulty) {
@@ -32,26 +31,18 @@ function CardTable({
     }
   };
 
-  const onCardMount = () => {
-    setCardCount((p) => p + 1);
-  };
-
-  const onCardDismount = () => {
-    setCardCount((p) => p - 1);
-  };
-
   useEffect(() => {
     if (isShuffling) {
       const shuffledCards = [...cards].sort(() => Math.random() - 0.5);
       setCards(shuffledCards);
       setIsShufflling(false);
     }
-    if (!isShuffling && cardCount >= difficulty) {
+    if (!isShuffling) {
       setTimeout(() => {
         setFaceUp(true);
       }, cardFlipDelay);
     }
-  }, [isShuffling, cards, setCards, cardCount, difficulty]);
+  }, [isShuffling, cards, setCards]);
 
   return (
     <section className={styles.cardTable}>
@@ -70,8 +61,6 @@ function CardTable({
           onGameOver={onGameOver}
           gameOver={gameOver}
           faceUp={faceUp}
-          onCardMount={onCardMount}
-          onCardDismount={onCardDismount}
         ></Card>
       ))}
     </section>
