@@ -55,3 +55,22 @@
   background-color: var(--primary_2);
   border-color: var(--primary_0);
 }
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    height: 200px;
+    width: 400px;
+    top: calc(50% - 100px);
+    left: calc(50% - 200px);
+  }
+
+  .modal p {
+    font-size: 1.8rem;
+  }
+
+  .modal button {
+    height: 60px;
+    width: 200px;
+    font-size: 1.5rem;
+  }
+}
