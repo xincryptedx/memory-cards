@@ -13,7 +13,9 @@ function GameOverModalContent({
   return (
     <>
       <h1>{message}</h1>
-      <button onClick={() => onModalEvent(onNewGame)}>New Game</button>
+      <button onClick={() => onModalEvent(onNewGame)} autoFocus={true}>
+        New Game
+      </button>
       <button onClick={() => onModalEvent(onQuit)}>Quit</button>
     </>
   );

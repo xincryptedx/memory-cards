@@ -5,7 +5,9 @@ function HelpModalContent({ setHelpModalOpen }) {
       <p>-Tap every card once.</p>
       <p>-Tap the same card twice and you lose!</p>
       <p>-New round starts when all cards tapped.</p>
-      <button onClick={() => setHelpModalOpen(false)}>OK</button>
+      <button onClick={() => setHelpModalOpen(false)} autoFocus={true}>
+        OK
+      </button>
     </>
   );
 }
