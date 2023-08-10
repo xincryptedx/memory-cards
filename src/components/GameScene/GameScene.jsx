@@ -19,6 +19,7 @@ function GameScene({
   getRandomCards,
   cardBackSrc,
 }) {
+  const [faceUp, setFaceUp] = useState(false);
   const [chosenCards, setChosenCards] = useState([]);
   const [gameOver, setGameOver] = useState(false);
   const [gameOverModalOpen, setGameOverModalOpen] = useState(false);
@@ -65,6 +66,8 @@ function GameScene({
         setCards={setCards}
         cardBackSrc={cardBackSrc}
         setScore={setScore}
+        faceUp={faceUp}
+        setFaceUp={setFaceUp}
         chosenCards={chosenCards}
         setChosenCards={setChosenCards}
         onNextRound={onNextRound}

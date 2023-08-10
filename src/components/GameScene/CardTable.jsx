@@ -11,6 +11,8 @@ function CardTable({
   cardBackSrc,
   difficulty,
   setScore,
+  faceUp,
+  setFaceUp,
   chosenCards,
   setChosenCards,
   onNextRound,
@@ -18,7 +20,6 @@ function CardTable({
   setGameOver,
   setGameOverModalOpen,
 }) {
-  const [faceUp, setFaceUp] = useState(false);
   const [isShuffling, setIsShufflling] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [mountedCards, setMountedCards] = useState(0);
