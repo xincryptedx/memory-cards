@@ -1,0 +1,52 @@
+.modalBackground {
+  background-color: hsla(0, 0%, 0%, 50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.modal {
+  display: grid;
+  justify-items: center;
+
+  height: 100px;
+  width: 200px;
+
+  position: fixed;
+  top: calc(50% - 50px);
+  left: calc(50% - 100px);
+
+  background-color: var(--primary_2);
+  border: 2px solid var(--primary_1);
+  border-radius: 5px;
+  color: white;
+
+  padding: 10px;
+}
+
+.modal p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.modal button {
+  color: var(--font_1);
+  font-weight: bold;
+  background-color: var(--primary_1);
+  border: 2px solid var(--primary_2);
+  border-radius: 5px;
+  width: 125px;
+  height: 30px;
+}
+
+.modal button:hover {
+  background-color: var(--primary_3);
+  border-color: var(--primary_1);
+}
+
+.modal button:active {
+  background-color: var(--primary_2);
+}
