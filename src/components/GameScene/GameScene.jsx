@@ -25,6 +25,7 @@ function GameScene({
   const [gameOverModalOpen, setGameOverModalOpen] = useState(false);
 
   const onNewGame = () => {
+    setFaceUp(false);
     setScore(0);
     setRound(1);
     setChosenCards([]);
