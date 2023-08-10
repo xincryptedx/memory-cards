@@ -47,6 +47,8 @@ function Card({
     <div
       className={`${styles.card} ${faceUp ? styles.faceUp : ""}`}
       onClick={onChooseCard}
+      role="button"
+      tabIndex={0}
     >
       <div className={styles.cardInner}>
         <img className={styles.front} src={image} alt={name} />
