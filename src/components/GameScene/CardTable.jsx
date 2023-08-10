@@ -9,6 +9,8 @@ function CardTable({
   cardBackSrc,
   difficulty,
   setScore,
+  highScore,
+  setHighScore,
   faceUp,
   setFaceUp,
   cardFlipDelay,
@@ -88,6 +90,8 @@ function CardTable({
           image={card.image}
           cardBackSrc={cardBackSrc}
           setScore={setScore}
+          highScore={highScore}
+          setHighScore={setHighScore}
           chosenCards={chosenCards}
           setChosenCards={setChosenCards}
           handleEndOfTurn={handleEndOfTurn}
