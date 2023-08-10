@@ -43,7 +43,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   filter: drop-shadow(1px 1px 1px grey);
-  color: var(--font_dark);
+  color: var(--font_light);
   justify-self: start;
 }
 
