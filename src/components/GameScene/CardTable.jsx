@@ -19,6 +19,8 @@ function CardTable({
 }) {
   const [faceUp, setFaceUp] = useState(false);
   const [isShuffling, setIsShufflling] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [mountedCards, setMountedCards] = useState(0);
 
   const handleEndOfTurn = () => {
     if (chosenCards.length + 1 === difficulty) {
@@ -37,12 +39,35 @@ function CardTable({
       setCards(shuffledCards);
       setIsShufflling(false);
     }
-    if (!isShuffling) {
+    if (!isShuffling && imagesLoaded && mountedCards === difficulty) {
       setTimeout(() => {
         setFaceUp(true);
       }, cardFlipDelay);
     }
-  }, [isShuffling, cards, setCards]);
+  }, [isShuffling, cards, setCards, imagesLoaded, mountedCards, difficulty]);
+
+  useEffect(() => {
+    const imagePromises = Object.values(cards).map((card) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => {
+          console.log("Image loaded:", img.naturalWidth);
+          resolve();
+        };
+        img.src = card.image;
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then(() => {
+        console.log("All images loaded");
+        setImagesLoaded(true);
+      })
+      .catch((error) => {
+        console.error("Error loading images:", error);
+        setImagesLoaded(false);
+      });
+  }, [cards]);
 
   return (
     <section className={styles.cardTable}>
@@ -61,6 +86,7 @@ function CardTable({
           onGameOver={onGameOver}
           gameOver={gameOver}
           faceUp={faceUp}
+          setMountedCards={setMountedCards}
         ></Card>
       ))}
     </section>
