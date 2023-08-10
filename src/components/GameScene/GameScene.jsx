@@ -13,6 +13,8 @@ function GameScene({
   setCards,
   score,
   setScore,
+  highScore,
+  setHighScore,
   round,
   setRound,
   setScene,
@@ -64,13 +66,19 @@ function GameScene({
         </Modal>
       ) : null}
       <ControlPanel onNewGame={onNewGame} onQuit={onQuit}></ControlPanel>
-      <StatsPanel score={score} round={round}></StatsPanel>
+      <StatsPanel
+        score={score}
+        highScore={highScore}
+        round={round}
+      ></StatsPanel>
       <CardTable
         difficulty={difficulty}
         cards={cards}
         setCards={setCards}
         cardBackSrc={cardBackSrc}
         setScore={setScore}
+        highScore={highScore}
+        setHighScore={setHighScore}
         faceUp={faceUp}
         cardFlipDelay={cardFlipDelay}
         setFaceUp={setFaceUp}
