@@ -46,7 +46,15 @@ function CardTable({
         setFaceUp(true);
       }, cardFlipDelay);
     }
-  }, [isShuffling, cards, setCards, imagesLoaded, mountedCards, difficulty]);
+  }, [
+    isShuffling,
+    cards,
+    setCards,
+    imagesLoaded,
+    mountedCards,
+    difficulty,
+    setFaceUp,
+  ]);
 
   useEffect(() => {
     const imagePromises = Object.values(cards).map((card) => {
