@@ -22,7 +22,10 @@ function App() {
 
   // Set new high score to local storage
   useEffect(() => {
-    localStorage.setItem("highScore", highScore);
+    const localHighScore = localStorage.getItem("highScore");
+    if (localHighScore && highScore > localHighScore) {
+      localStorage.setItem("highScore", highScore);
+    }
   }, [highScore]);
 
   const getRandomCards = async () => {
