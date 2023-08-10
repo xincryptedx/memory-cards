@@ -1,10 +1,20 @@
 /* eslint-disable react/prop-types */
-function GameOverModalContent({ message }) {
+function GameOverModalContent({
+  setGameOverModalOpen,
+  message,
+  onQuit,
+  onNewGame,
+}) {
+  const onModalEvent = (fn) => {
+    setGameOverModalOpen(false);
+    fn();
+  };
+
   return (
     <>
       <p>{message}</p>
-      <button>New Game</button>
-      <button>Quit</button>
+      <button onClick={onModalEvent(onNewGame)}>New Game</button>
+      <button onClick={onModalEvent(onQuit)}>Quit</button>
     </>
   );
 }
