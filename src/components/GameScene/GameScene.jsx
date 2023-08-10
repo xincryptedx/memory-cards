@@ -49,7 +49,11 @@ function GameScene({
     <main className={styles.gameScene}>
       {gameOverModalOpen ? (
         <Modal>
-          <GameOverModalContent message={"Game Over"}></GameOverModalContent>
+          <GameOverModalContent
+            message={"Game Over"}
+            onQuit={onQuit}
+            onNewGame={onNewGame}
+          ></GameOverModalContent>
         </Modal>
       ) : null}
       <ControlPanel onNewGame={onNewGame} onQuit={onQuit}></ControlPanel>
