@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import styles from "./CardTable.module.css";
 import Card from "./Card.jsx";
 
-const cardFlipDelay = 500;
-
 function CardTable({
   cards,
   setCards,
@@ -13,6 +11,7 @@ function CardTable({
   setScore,
   faceUp,
   setFaceUp,
+  cardFlipDelay,
   chosenCards,
   setChosenCards,
   onNextRound,
@@ -54,6 +53,7 @@ function CardTable({
     mountedCards,
     difficulty,
     setFaceUp,
+    cardFlipDelay,
   ]);
 
   useEffect(() => {
@@ -61,7 +61,6 @@ function CardTable({
       return new Promise((resolve) => {
         const img = new Image();
         img.onload = () => {
-          console.log("Image loaded:", img.naturalWidth);
           resolve();
         };
         img.src = card.image;
@@ -70,7 +69,6 @@ function CardTable({
 
     Promise.all(imagePromises)
       .then(() => {
-        console.log("All images loaded");
         setImagesLoaded(true);
       })
       .catch((error) => {

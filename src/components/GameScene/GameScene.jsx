@@ -24,13 +24,17 @@ function GameScene({
   const [gameOver, setGameOver] = useState(false);
   const [gameOverModalOpen, setGameOverModalOpen] = useState(false);
 
+  const cardFlipDelay = 500;
+
   const onNewGame = () => {
     setFaceUp(false);
     setScore(0);
     setRound(1);
     setChosenCards([]);
-    getRandomCards();
     setGameOver(false);
+    setTimeout(() => {
+      getRandomCards();
+    }, cardFlipDelay);
   };
 
   const onQuit = () => {
@@ -68,6 +72,7 @@ function GameScene({
         cardBackSrc={cardBackSrc}
         setScore={setScore}
         faceUp={faceUp}
+        cardFlipDelay={cardFlipDelay}
         setFaceUp={setFaceUp}
         chosenCards={chosenCards}
         setChosenCards={setChosenCards}
