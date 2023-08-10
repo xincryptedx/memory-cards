@@ -24,6 +24,10 @@
   filter: drop-shadow(1px 1px 2px black);
 }
 
+.controlPanel button:hover {
+  background-color: var(--primary_2);
+}
+
 .newGameButton {
   grid-area: new;
 }
