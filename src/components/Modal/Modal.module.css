@@ -62,6 +62,10 @@
   background-color: var(--primary_2);
 }
 
+.modal button:focus {
+  outline: 2px solid white;
+}
+
 @media only screen and (min-width: 768px) {
   .modal {
     height: minmax(200px, min-content);
