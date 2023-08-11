@@ -57,7 +57,6 @@ function Card({
       tabIndex={0}
       onKeyDown={onKeyboardEnter}
     >
-      <div className={styles.cardGlow} />
       <div className={styles.cardInner}>
         <img className={styles.front} src={image} alt={name} />
         <img className={styles.back} src={cardBackSrc} alt="" />
