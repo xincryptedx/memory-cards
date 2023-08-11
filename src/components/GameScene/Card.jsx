@@ -61,6 +61,7 @@ function Card({
         <img className={styles.front} src={image} alt={name} />
         <img className={styles.back} src={cardBackSrc} alt="" />
       </div>
+      <div className={styles.cardGlow} />
     </div>
   );
 }
