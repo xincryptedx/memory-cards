@@ -50,9 +50,12 @@ function GameScene({
   };
 
   const onNextRound = () => {
+    setFaceUp(false);
     setRound((p) => p + 1);
     setChosenCards([]);
-    getRandomCards();
+    setTimeout(() => {
+      getRandomCards();
+    }, cardFlipDelay);
   };
 
   return (
